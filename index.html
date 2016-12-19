@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+<body>
+  
+  <div class="app">
+      <div class="contenedor-izquierdo">
+          <ul class="lista-canciones">
+              <li class="cancion">Cancion 1</li>
+              <li class="cancion">Cancion 2</li>
+          </ul>
+      </div>
+      
+  <div class="contenedor-derecho">
+      <audio controls class="audio"></audio>
+  </div>
+  
+  <form action="/canciones" class="upload-form" method="post" enctype="multipart/form-data">
+      <input type="file" id="song" name="cancion" />
+      <input type="submit" value="subir">
+  </form>
+  
+  </div>
+  
+
+  <script src="/jquery/jquery.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
