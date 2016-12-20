@@ -2,9 +2,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
-    background: #f2f2fa;
-    color: #000;
+    background: #000;
+    color: #fff;
 }
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.contenedor-izquierdo {
+    flex: 1;
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
+}
+
+.lista-canciones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cancion {
+    padding: 20px;
+    background: #1c1c1f;
+    border-bottom: 2px solid #121314;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contenedor-derecho {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-form {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*display: flex;
+    width: 355px;*/
+}
+
+@media(max-width:768px){
+    
+    .contenedor-izquierdo {
+        flex: 1.6;
+    }
+    
+    .upload-form {
+        display: flex;
+        width: 355px;
+    }
+}
+
+@media(max-width:600px) {
+    .app {
+        flex-direction: column;
+    }
+    
+    .contenedor-izquierdo {
+        flex: 3;
+    }
+    
+    .lista-canciones {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+    
+    .contenedor-derecho {
+        flex: 1;
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+    }
+    
+    .upload-form {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
