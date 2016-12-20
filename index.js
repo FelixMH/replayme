@@ -7,6 +7,8 @@ var mediaserver = require('mediaserver');
 //importamos a multer
 var multer = require('multer');
 
+const port = process.env.PORT || 3000;
+
 var opcionesMulter = multer.diskStorage({
     destination: function(req,file,cb){
         cb(null,path.join(__dirname,'canciones'));
@@ -56,6 +58,6 @@ app.post('/canciones',upload.single('cancion'),function(req,res){
 });
 
 //llamamos a express y decimos que se ejecute en el puerto 3000
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log('Aplicacion corriendo'); //imprimimos un mensaje en la consola
 });
